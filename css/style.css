@@ -44,6 +44,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .py {
@@ -173,47 +174,60 @@ nav article i:hover {
 }
 
 /***slider***/
-.mainHeader {
+
+header {
+  height: 100vh;
+  position: relative;
+}
+
+header h1 {
+  width: 30%;
+  margin: 0 auto;
+  text-align: center;
+  padding: 10px;
+  background: rgba(136, 67, 219, .8);
   color: var(--border);
   text-transform: uppercase;
   font-size: 5rem;
-  text-align: center;
   line-height: 1;
   position: relative;
-  top: -500px;
-  left: 500px;
-  z-index: 1;
-  padding: 30px 0;
+  top: 200px;
 }
 
-.mainHeader .naslov {
-  width: 30%;
-  background: rgba(136, 67, 219, .8);
-  padding: 20px 0;
+.slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
 }
 
 @media(max-width: 767px) {
-  .mainHeader {
-    font-size: 2rem;
-    top: -300px;
-    left: 300px;
+  header {
+    height: 20vh;
+
   }
 
-  .mainHeader .naslov {
+  header h1 {
+    width: 40%;
+    font-size: 3rem;
+    top: 100px;
+  }
+
+  .naslov {
     padding: 20px 0;
   }
-
-
 }
 
 /***banners***/
 .banners {
-  margin-top: -250px
+  margin-top: 50px;
 }
 
 @media(max-width: 767px) {
   .banners {
-    margin-top: -100px
+    margin-top: 250px;
   }
 }
 
@@ -234,7 +248,7 @@ nav article i:hover {
   }
 
   .banners article {
-    width: 100%;
+    width: 80%;
   }
 }
 
